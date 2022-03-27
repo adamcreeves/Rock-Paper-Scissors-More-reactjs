@@ -54,7 +54,7 @@ export const handleButtonPress = (
 export const availableOptions = ["rock", "paper", "scissors"];
 
 export const displayMessage = [
-  "Let's play!",
+  "Let's play a game!",
   "You throw ",
   "the computer throws ",
   "You win the round!",

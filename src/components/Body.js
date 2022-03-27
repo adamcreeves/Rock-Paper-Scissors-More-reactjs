@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import {
-  availableOptions,
-  displayMessage,
-  handleButtonPress,
-} from "../utils/Utils";
+import { availableOptions, handleButtonPress } from "../utils/Utils";
 import RPSButton from "./subcomponents/RPSButton";
 import ScoreBoard from "./subcomponents/ScoreBoard";
 import Title from "./subcomponents/Title";
 import "../styles/Main.css";
+import ResponseMessage from "./subcomponents/ResponseMessage";
 
 function Body() {
   const [playerScore, setPlayerScore] = useState(0);
@@ -58,6 +55,7 @@ function Body() {
     setPlayersThrow(3);
     setOpponentsThrow(3);
   };
+  const isNewGame = opponentsThrow === 3;
 
   return (
     <div className="body">
@@ -65,25 +63,36 @@ function Body() {
       <Title str={"Rock Paper Scissors Game for Web"} classNm={"subtitle"} />
       <ScoreBoard playerScore={playerScore} opponentScore={opponentScore} />
       <div className="body__buttonRow">
-        <RPSButton buttonFunc={rockPressed} label={"Rock"} />
-        <RPSButton buttonFunc={paperPressed} label={"Paper"} />
-        <RPSButton buttonFunc={scissorsPressed} label={"Scissors"} />
+        <RPSButton
+          buttonFunc={rockPressed}
+          label={"Rock"}
+          buttonClass={"button"}
+        />
+        <RPSButton
+          buttonFunc={paperPressed}
+          label={"Paper"}
+          buttonClass={"button"}
+        />
+        <RPSButton
+          buttonFunc={scissorsPressed}
+          label={"Scissors"}
+          buttonClass={"button"}
+        />
       </div>
-      {opponentsThrow === 3 ? (
-        <div>{displayMessage[messageIndex]}</div>
-      ) : (
-        <div>
-          <div>
-            {displayMessage[1] +
-              availableOptions[playersThrow] +
-              " and " +
-              displayMessage[2] +
-              availableOptions[opponentsThrow]}
-          </div>
-          <div className="outcomeMessage">{displayMessage[messageIndex]}</div>
+      <ResponseMessage
+        playersThrow={playersThrow}
+        opponentsThrow={opponentsThrow}
+        messageIndex={messageIndex}
+      />
+      {!isNewGame && (
+        <div className="body__resetButton">
+          <RPSButton
+            buttonFunc={resetPressed}
+            label={"Reset"}
+            buttonClass={"resetButton"}
+          />
         </div>
       )}
-      <RPSButton buttonFunc={resetPressed} label={"Reset"} />
     </div>
   );
 }

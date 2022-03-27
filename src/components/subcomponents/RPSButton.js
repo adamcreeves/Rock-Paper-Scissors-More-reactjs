@@ -1,9 +1,9 @@
 import React from "react";
 import "../../styles/Main.css";
 
-function RPSButton({ buttonFunc, label }) {
+function RPSButton({ buttonFunc, label, buttonClass }) {
   return (
-    <button className="button" onClick={buttonFunc}>
+    <button className={buttonClass} onClick={buttonFunc}>
       {label}
     </button>
   );

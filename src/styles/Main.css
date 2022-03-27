@@ -22,20 +22,29 @@ code {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 25%;
-}
-
-.body__buttonRow {
-  margin-bottom: 3%;
+  margin-top: 20%;
 }
 
 .button {
-  margin: 15px;
-  width: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 150px;
   height: 50px;
   border-radius: 5px;
-  color: aqua;
+  color: skyblue;
   background-color: black;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.resetButton {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  color: red;
+  background-color: white;
+  border-color: red;
+  border-width: 2px;
   font-size: 20px;
 }
 
@@ -55,19 +64,20 @@ code {
   display: flex;
   flex-direction: row;
   margin: 10px;
-}
-
-.outcomeMessage {
-  text-align: center;
-  margin: 10px;
+  font-size: 20px;
 }
 
 .scoreBoard__label {
   margin-right: 5px;
 }
 
+.scoreBoard__score {
+  font-weight: 700;
+}
+
 .title {
   font-size: 35px;
+  margin: 1%;
 }
 
 .subtitle {
@@ -77,4 +87,26 @@ code {
 .scoreText {
   font-size: 25px;
   font-weight: 600;
+  text-decoration: underline;
+  margin: 10px;
+}
+
+.responseMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 80vw;
+}
+
+.responseMessage__throws {
+  font-size: 20px;
+  height: 25px;
+  margin-bottom: 2%;
+}
+
+.responseMessage__outcome {
+  font-size: 25px;
+  height: 30px;
 }
