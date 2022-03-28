@@ -5,8 +5,8 @@ function RegisterPlayers({ setPlayer1, setPlayer2 }) {
   const [name2, setName2] = useState("");
   const startGamePressed = () => {
     if (name1.toLowerCase() !== name2.toLowerCase()) {
-      setPlayer1(name1);
-      setPlayer2(name2);
+      setPlayer1(name1.trim());
+      setPlayer2(name2.trim());
     } else {
       alert("You need to enter different names");
     }
