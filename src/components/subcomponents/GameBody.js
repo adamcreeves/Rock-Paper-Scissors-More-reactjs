@@ -8,11 +8,11 @@ import "../../styles/Main.css";
 function GameBody({ player1, player2, resetPlayers }) {
   const [player1Score, setPlayer1Score] = useState(0);
   const [player2Score, setPlayer2Score] = useState(0);
-  const [playersThrow, setPlayersThrow] = useState(3);
-  const [opponentsThrow, setOpponentsThrow] = useState(3);
+  const [player1Throw, setPlayer1Throw] = useState(3);
+  const [player2Throw, setPlayer2Throw] = useState(3);
   const [winnerMessage, setWinnerMessage] = useState("");
   const rockPressed = () => {
-    setPlayersThrow(0);
+    setPlayer1Throw(0);
     handleButtonPress(
       availableOptions[0],
       player1,
@@ -21,12 +21,12 @@ function GameBody({ player1, player2, resetPlayers }) {
       player2,
       player2Score,
       setPlayer2Score,
-      setOpponentsThrow,
+      setPlayer2Throw,
       setWinnerMessage
     );
   };
   const paperPressed = () => {
-    setPlayersThrow(1);
+    setPlayer1Throw(1);
     handleButtonPress(
       availableOptions[1],
       player1,
@@ -35,12 +35,12 @@ function GameBody({ player1, player2, resetPlayers }) {
       player2,
       player2Score,
       setPlayer2Score,
-      setOpponentsThrow,
+      setPlayer2Throw,
       setWinnerMessage
     );
   };
   const scissorsPressed = () => {
-    setPlayersThrow(2);
+    setPlayer1Throw(2);
     handleButtonPress(
       availableOptions[2],
       player1,
@@ -49,7 +49,7 @@ function GameBody({ player1, player2, resetPlayers }) {
       player2,
       player2Score,
       setPlayer2Score,
-      setOpponentsThrow,
+      setPlayer2Throw,
       setWinnerMessage
     );
   };
@@ -57,11 +57,11 @@ function GameBody({ player1, player2, resetPlayers }) {
     setPlayer1Score(0);
     setPlayer2Score(0);
     setWinnerMessage("");
-    setPlayersThrow(3);
-    setOpponentsThrow(3);
+    setPlayer1Throw(3);
+    setPlayer2Throw(3);
   };
   const newGamePressed = () => resetPlayers();
-  const isNewGame = opponentsThrow === 3;
+  const isNewGame = player1Throw === 3;
   return (
     <div className="gameBody">
       <ScoreBoard
@@ -90,8 +90,8 @@ function GameBody({ player1, player2, resetPlayers }) {
       <ResponseMessage
         player1={player1}
         player2={player2}
-        playersThrow={playersThrow}
-        opponentsThrow={opponentsThrow}
+        playersThrow={player1Throw}
+        opponentsThrow={player2Throw}
         winnerMessage={winnerMessage}
       />
       {!isNewGame && (
