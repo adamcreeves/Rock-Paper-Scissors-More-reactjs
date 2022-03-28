@@ -5,10 +5,10 @@ For React js practice, I made a fully functional Rock, Paper, Scissors game for 
 
 ###### Web - iMac
 [Landing Screen<br />![A New Game](https://i.imgur.com/ZLAQJjl.png)]
-[Game Start Screen<br />![Playing example 1](https://i.imgur.com/mDeI4DA.png)]
-[Mid Game Screen<br />![Playing example 2](https://i.imgur.com/JEwxLjY.png)]
+<br />[Game Start Screen<br />![Playing example 1](https://i.imgur.com/mDeI4DA.png)]
+<br />[Mid Game Screen<br />![Playing example 2](https://i.imgur.com/JEwxLjY.png)]
 
 ###### Mobile - iPhone
 [Landing Screen<br />![A New Game](https://i.imgur.com/vM4VTwf.png)]
-[Game Start Screen<br />![Playing example 1](https://i.imgur.com/UvrWAOG.png)]
-[Mid Game Screen<br />![Playing example 2](https://i.imgur.com/d1mxW6n.png)]
+<br />[Game Start Screen<br />![Playing example 1](https://i.imgur.com/UvrWAOG.png)]
+<br />[Mid Game Screen<br />![Playing example 2](https://i.imgur.com/d1mxW6n.png)]
