@@ -1,53 +1,55 @@
 export const handleButtonPress = (
   label,
-  playerScore,
-  setPlayerScore,
-  opponentScore,
-  setOpponentScore,
+  player1,
+  player1Score,
+  setPlayer1Score,
+  player2,
+  player2Score,
+  setPlayer2Score,
   setOpponentsThrow,
-  setWinnerMessageIndex
+  setWinnerMessage
 ) => {
   const randomIndex = Math.floor(Math.random() * 3);
   setOpponentsThrow(randomIndex);
   const opponentThrows = availableOptions[randomIndex];
   if (label === opponentThrows) {
-    setWinnerMessageIndex(5);
+    setWinnerMessage(displayMessage[1]);
   } else if (
     label === availableOptions[0] &&
     opponentThrows === availableOptions[1]
   ) {
-    setWinnerMessageIndex(4);
-    setOpponentScore(opponentScore + 1);
+    setWinnerMessage(player2 + displayMessage[2]);
+    setPlayer2Score(player2Score + 1);
   } else if (
     label === availableOptions[0] &&
     opponentThrows === availableOptions[2]
   ) {
-    setWinnerMessageIndex(3);
-    setPlayerScore(playerScore + 1);
+    setWinnerMessage(player1 + displayMessage[2]);
+    setPlayer1Score(player1Score + 1);
   } else if (
     label === availableOptions[1] &&
     opponentThrows === availableOptions[0]
   ) {
-    setWinnerMessageIndex(3);
-    setPlayerScore(playerScore + 1);
+    setWinnerMessage(player1 + displayMessage[2]);
+    setPlayer1Score(player1Score + 1);
   } else if (
     label === availableOptions[1] &&
     opponentThrows === availableOptions[2]
   ) {
-    setWinnerMessageIndex(4);
-    setOpponentScore(opponentScore + 1);
+    setWinnerMessage(player2 + displayMessage[2]);
+    setPlayer2Score(player2Score + 1);
   } else if (
     label === availableOptions[2] &&
     opponentThrows === availableOptions[0]
   ) {
-    setWinnerMessageIndex(4);
-    setOpponentScore(opponentScore + 1);
+    setWinnerMessage(player2 + displayMessage[2]);
+    setPlayer2Score(player2Score + 1);
   } else if (
     label === availableOptions[2] &&
     opponentThrows === availableOptions[1]
   ) {
-    setWinnerMessageIndex(3);
-    setPlayerScore(playerScore + 1);
+    setWinnerMessage(player1 + displayMessage[2]);
+    setPlayer1Score(player1Score + 1);
   }
 };
 
@@ -55,9 +57,6 @@ export const availableOptions = ["rock", "paper", "scissors"];
 
 export const displayMessage = [
   "Let's play a game!",
-  "You throw ",
-  "the computer throws ",
-  "You win the round!",
-  "The computer wins the round!",
   "This round is a tie",
+  " wins the round!",
 ];
