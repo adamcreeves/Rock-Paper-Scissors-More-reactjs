@@ -1,8 +1,8 @@
 import React from "react";
-import { availableOptions, displayMessage } from "../../utils/Utils";
+import { availableOptions } from "../../utils/Utils";
 import "../../styles/Main.css";
-import { str_015, str_016 } from "../../resources/strings";
-import { int_001, int_004 } from "../../resources/integers";
+import { str_015, str_016, str_020 } from "../../resources/strings";
+import { int_004 } from "../../resources/integers";
 import { c_011, c_012, c_013 } from "../../resources/classNames";
 
 function ResponseMessage({
@@ -16,7 +16,7 @@ function ResponseMessage({
     <div>
       {player2sThrow === int_004 ? (
         <div className={c_011}>
-          <div className={c_012}>{displayMessage[int_001]}</div>
+          <div className={c_012}>{str_020}</div>
         </div>
       ) : (
         <div className={c_011}>
