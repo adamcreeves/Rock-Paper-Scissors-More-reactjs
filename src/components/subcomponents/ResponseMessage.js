@@ -1,32 +1,35 @@
 import React from "react";
 import { availableOptions, displayMessage } from "../../utils/Utils";
 import "../../styles/Main.css";
+import { str_015, str_016 } from "../../resources/strings";
+import { int_001, int_004 } from "../../resources/integers";
+import { c_011, c_012, c_013 } from "../../resources/classNames";
 
 function ResponseMessage({
   player1,
   player2,
-  opponentsThrow,
+  player1sThrow,
+  player2sThrow,
   winnerMessage,
-  playersThrow,
 }) {
   return (
     <div>
-      {opponentsThrow === 3 ? (
-        <div className="responseMessage">
-          <div className="responseMessage__outcome">{displayMessage[0]}</div>
+      {player2sThrow === int_004 ? (
+        <div className={c_011}>
+          <div className={c_012}>{displayMessage[int_001]}</div>
         </div>
       ) : (
-        <div className="responseMessage">
-          <div className="responseMessage__throws">
+        <div className={c_011}>
+          <div className={c_013}>
             {player1 +
-              " throws " +
-              availableOptions[playersThrow] +
-              " and " +
+              str_015 +
+              availableOptions[player1sThrow] +
+              str_016 +
               player2 +
-              " throws " +
-              availableOptions[opponentsThrow]}
+              str_015 +
+              availableOptions[player2sThrow]}
           </div>
-          <div className="responseMessage__outcome">{winnerMessage}</div>
+          <div className={c_012}>{winnerMessage}</div>
         </div>
       )}
     </div>
