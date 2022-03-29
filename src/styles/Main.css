@@ -207,7 +207,8 @@ code {
   }
 
   .gameBody {
-    height: 470px;
+    min-height: 470px;
+    height: auto;
   }
 
   .title {
