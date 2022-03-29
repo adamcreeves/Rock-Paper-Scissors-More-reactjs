@@ -6,7 +6,7 @@ For React js practice, I made a fully functional Rock, Paper, Scissors game for 
 
 #### Mobile - iPhone
 
-##### [Landing Screen<br />![A New Game](https://i.imgur.com/vM4VTwf.png)]
+##### [Landing Screen<br />![A New Game](https://i.imgur.com/XyxjsAM.png)]
 
 ##### <br />[Game Start Screen<br />![Playing example 1](https://i.imgur.com/OjNt4kB.png)]
 
