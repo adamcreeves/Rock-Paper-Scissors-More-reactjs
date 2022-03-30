@@ -2,7 +2,7 @@
 
 For React js practice, I made a fully functional Rock, Paper, Scissors game for web and mobile. It is hosted with Firebase at: https://rock-paper-scissors-8f93e.web.app
 
-### Screenshots:
+### Screenshots: (Out of date)
 
 #### Mobile - iPhone
 
