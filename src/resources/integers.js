@@ -4,3 +4,7 @@ export const int_003 = 2;
 export const int_004 = 3;
 export const int_005 = 4;
 export const int_006 = 5;
+export const int_007 = 6;
+export const int_008 = 7;
+export const int_009 = 8;
+export const int_010 = 9;

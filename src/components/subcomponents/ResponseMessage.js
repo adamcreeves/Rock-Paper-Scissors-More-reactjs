@@ -1,7 +1,7 @@
 import React from "react";
 import { availableOptions } from "../../utils/Utils";
 import { str_015, str_016, str_020 } from "../../resources/strings";
-import { int_006 } from "../../resources/integers";
+import { int_010 } from "../../resources/integers";
 import { c_011, c_012, c_013, c_020 } from "../../resources/classNames";
 import "../../styles/Main.css";
 
@@ -15,7 +15,7 @@ function ResponseMessage({
 }) {
   return (
     <div>
-      {player2sThrow === int_006 ? (
+      {player2sThrow === int_010 ? (
         <div className={c_011}>
           <div className={c_012}>{str_020}</div>
         </div>

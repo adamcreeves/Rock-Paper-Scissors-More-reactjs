@@ -17,6 +17,13 @@ import {
   str_026,
   str_027,
   str_028,
+  str_039,
+  str_040,
+  str_041,
+  str_042,
+  str_070,
+  str_071,
+  str_072,
 } from "../../resources/strings";
 import {
   int_001,
@@ -25,6 +32,10 @@ import {
   int_004,
   int_005,
   int_006,
+  int_007,
+  int_008,
+  int_009,
+  int_010,
 } from "../../resources/integers";
 import {
   c_004,
@@ -38,8 +49,8 @@ import {
 function GameBody({ player1, player2, resetPlayers }) {
   const [player1Score, setPlayer1Score] = useState(int_001);
   const [player2Score, setPlayer2Score] = useState(int_001);
-  const [player1Throw, setPlayer1Throw] = useState(int_006);
-  const [player2Throw, setPlayer2Throw] = useState(int_006);
+  const [player1Throw, setPlayer1Throw] = useState(int_010);
+  const [player2Throw, setPlayer2Throw] = useState(int_010);
   const [winnerMessage, setWinnerMessage] = useState(str_001);
   const [resultMessage, setResultMessage] = useState(str_001);
   const rockPressed = () => {
@@ -117,16 +128,76 @@ function GameBody({ player1, player2, resetPlayers }) {
       setResultMessage
     );
   };
+  const firePressed = () => {
+    setPlayer1Throw(int_006);
+    handleButtonPress(
+      str_039,
+      player1,
+      player1Score,
+      setPlayer1Score,
+      player2,
+      player2Score,
+      setPlayer2Score,
+      setPlayer2Throw,
+      setWinnerMessage,
+      setResultMessage
+    );
+  };
+  const glassPressed = () => {
+    setPlayer1Throw(int_007);
+    handleButtonPress(
+      str_040,
+      player1,
+      player1Score,
+      setPlayer1Score,
+      player2,
+      player2Score,
+      setPlayer2Score,
+      setPlayer2Throw,
+      setWinnerMessage,
+      setResultMessage
+    );
+  };
+  const dynamitePressed = () => {
+    setPlayer1Throw(int_008);
+    handleButtonPress(
+      str_071,
+      player1,
+      player1Score,
+      setPlayer1Score,
+      player2,
+      player2Score,
+      setPlayer2Score,
+      setPlayer2Throw,
+      setWinnerMessage,
+      setResultMessage
+    );
+  };
+  const putinPressed = () => {
+    setPlayer1Throw(int_009);
+    handleButtonPress(
+      str_072,
+      player1,
+      player1Score,
+      setPlayer1Score,
+      player2,
+      player2Score,
+      setPlayer2Score,
+      setPlayer2Throw,
+      setWinnerMessage,
+      setResultMessage
+    );
+  };
   const resetPressed = () => {
     setPlayer1Score(int_001);
     setPlayer2Score(int_001);
     setResultMessage(int_001);
     setWinnerMessage(str_001);
-    setPlayer1Throw(int_006);
-    setPlayer2Throw(int_006);
+    setPlayer1Throw(int_010);
+    setPlayer2Throw(int_010);
   };
   const newGamePressed = () => resetPlayers();
-  const isNewGame = player1Throw === int_006;
+  const isNewGame = player1Throw === int_010;
   return (
     <div className={c_004}>
       <div className={c_006}>
@@ -152,6 +223,23 @@ function GameBody({ player1, player2, resetPlayers }) {
       <div className={c_021}>
         <div className={c_005}>
           <RPSButton
+            buttonFunc={firePressed}
+            label={str_041}
+            buttonClass={c_008}
+          />
+          <RPSButton
+            buttonFunc={glassPressed}
+            label={str_042}
+            buttonClass={c_008}
+          />
+          <RPSButton
+            buttonFunc={dynamitePressed}
+            label={str_070}
+            buttonClass={c_008}
+          />
+        </div>
+        <div className={c_005}>
+          <RPSButton
             buttonFunc={rockPressed}
             label={str_004}
             buttonClass={c_008}
@@ -168,6 +256,11 @@ function GameBody({ player1, player2, resetPlayers }) {
           />
         </div>
         <div className={c_005}>
+          <RPSButton
+            buttonFunc={putinPressed}
+            label={str_072}
+            buttonClass={c_008}
+          />
           <RPSButton
             buttonFunc={lizardPressed}
             label={str_028}
