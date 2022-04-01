@@ -1,8 +1,10 @@
-# Rock, Paper, Scissors, More Game
+# Rock, Paper, Scissors, and More Game
 
 ## Built with React js
 
-For React js practice, I made a fully functional Rock, Paper, Scissors game (expanded) for web and mobile with 9 different playable moves/options. Each option has an equal chance or winning or losing It is hosted with Firebase at: https://rock-paper-scissors-8f93e.web.app
+I made a fully functional Rock, Paper, Scissors, and More game (expanded) for web and mobile with 9 different playable moves/options. Each option has an equal chance of winning or losing. It's hosted with Firebase
+
+### Play the game here: https://rock-paper-scissors-8f93e.web.app
 
 ## Rules of the game:
 
