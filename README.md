@@ -4,20 +4,18 @@ For React js practice, I made a fully functional Rock, Paper, Scissors game (exp
 
 ### Screenshots:
 
-#### Mobile - iPhone
+#### Mobile - Android
 
-##### [Landing Screen<br />![A New Game](https://i.imgur.com/XyxjsAM.png)]
+##### <br />[Landing<br />![Landing screen](https://i.imgur.com/aPYspyn.png)]
 
-##### <br />[Game Start Screen<br />![Playing example 1](https://i.imgur.com/aPYspyn.png)]
+##### <br />[Game Start<br />![New game start](https://i.imgur.com/IZKyw8q.png)]
 
-##### <br />[Mid Game Screen 1<br />![Playing example 2](https://i.imgur.com/IZKyw8q.png)]
+##### <br />[Mid Game<br />![Playing example](https://i.imgur.com/x7LOMaU.png)]
 
-##### <br />[Mid Game Screen 2<br />![Playing example 3](https://i.imgur.com/x7LOMaU.png)]
+#### Web - Safari browser
 
-#### Web - iMac
+##### [Landing<br />![Landing screen](https://i.imgur.com/WbFXSe6.png)]
 
-##### [Landing Screen<br />![A New Game](https://i.imgur.com/WbFXSe6.png)]
+##### <br />[Game Start<br />![Game start screen](https://i.imgur.com/zTKb4ro.png)]
 
-##### <br />[Game Start Screen<br />![Playing example 1](https://i.imgur.com/zTKb4ro.png)]
-
-##### <br />[Mid Game Screen 1<br />![Playing example 2](https://i.imgur.com/wp4Cafe.png)]
+##### <br />[Mid Game<br />![Playing example](https://i.imgur.com/wp4Cafe.png)]
