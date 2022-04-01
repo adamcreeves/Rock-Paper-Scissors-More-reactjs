@@ -4,7 +4,7 @@
 
 I made a fully functional Rock, Paper, Scissors, and More game (expanded) for web and mobile with 9 different playable moves/options. Each option has an equal chance of winning or losing. It's hosted with Firebase
 
-### Play the game here: https://rock-paper-scissors-8f93e.web.app
+### Play the game here:<br />https://rock-paper-scissors-8f93e.web.app
 
 ## Rules of the game:
 
