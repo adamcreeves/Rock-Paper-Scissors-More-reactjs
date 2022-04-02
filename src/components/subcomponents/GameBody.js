@@ -3,7 +3,7 @@ import { handleButtonPress } from "../../utils/Utils";
 import ResponseMessage from "./ResponseMessage";
 import RPSButton from "./RPSButton";
 import ScoreBoard from "./ScoreBoard";
-import "../../styles/Main.css";
+import Cookies from "universal-cookie";
 import {
   str_001,
   str_004,
@@ -21,9 +21,14 @@ import {
   str_040,
   str_041,
   str_042,
+  str_054,
   str_070,
   str_071,
   str_072,
+  str_073,
+  str_074,
+  str_075,
+  str_076,
 } from "../../resources/strings";
 import {
   int_001,
@@ -45,22 +50,29 @@ import {
   c_008,
   c_021,
 } from "../../resources/classNames";
+import "../../styles/Main.css";
 
 function GameBody({ player1, player2, resetPlayers }) {
-  const [player1Score, setPlayer1Score] = useState(int_001);
-  const [player2Score, setPlayer2Score] = useState(int_001);
+  const cookies = new Cookies();
+  const storedPlayer1Score = parseInt(cookies.get(str_075)) || int_001;
+  const storedPlayer2Score = parseInt(cookies.get(str_076)) || int_001;
+  const [player1Score, setPlayer1Score] = useState(storedPlayer1Score);
+  const [player2Score, setPlayer2Score] = useState(storedPlayer2Score);
   const [player1Throw, setPlayer1Throw] = useState(int_010);
   const [player2Throw, setPlayer2Throw] = useState(int_010);
   const [winnerMessage, setWinnerMessage] = useState(str_001);
   const [resultMessage, setResultMessage] = useState(str_001);
+  const player1SavedOrNew = cookies.get(str_073) || player1;
+  const player2SavedOrNew = cookies.get(str_074) || player2;
+
   const rockPressed = () => {
     setPlayer1Throw(int_001);
     handleButtonPress(
       str_023,
-      player1,
+      player1SavedOrNew,
       player1Score,
       setPlayer1Score,
-      player2,
+      player2SavedOrNew,
       player2Score,
       setPlayer2Score,
       setPlayer2Throw,
@@ -72,10 +84,10 @@ function GameBody({ player1, player2, resetPlayers }) {
     setPlayer1Throw(int_002);
     handleButtonPress(
       str_024,
-      player1,
+      player1SavedOrNew,
       player1Score,
       setPlayer1Score,
-      player2,
+      player2SavedOrNew,
       player2Score,
       setPlayer2Score,
       setPlayer2Throw,
@@ -87,10 +99,10 @@ function GameBody({ player1, player2, resetPlayers }) {
     setPlayer1Throw(int_003);
     handleButtonPress(
       str_025,
-      player1,
+      player1SavedOrNew,
       player1Score,
       setPlayer1Score,
-      player2,
+      player2SavedOrNew,
       player2Score,
       setPlayer2Score,
       setPlayer2Throw,
@@ -102,10 +114,10 @@ function GameBody({ player1, player2, resetPlayers }) {
     setPlayer1Throw(int_004);
     handleButtonPress(
       str_026,
-      player1,
+      player1SavedOrNew,
       player1Score,
       setPlayer1Score,
-      player2,
+      player2SavedOrNew,
       player2Score,
       setPlayer2Score,
       setPlayer2Throw,
@@ -132,10 +144,10 @@ function GameBody({ player1, player2, resetPlayers }) {
     setPlayer1Throw(int_006);
     handleButtonPress(
       str_039,
-      player1,
+      player1SavedOrNew,
       player1Score,
       setPlayer1Score,
-      player2,
+      player2SavedOrNew,
       player2Score,
       setPlayer2Score,
       setPlayer2Throw,
@@ -147,10 +159,10 @@ function GameBody({ player1, player2, resetPlayers }) {
     setPlayer1Throw(int_007);
     handleButtonPress(
       str_040,
-      player1,
+      player1SavedOrNew,
       player1Score,
       setPlayer1Score,
-      player2,
+      player2SavedOrNew,
       player2Score,
       setPlayer2Score,
       setPlayer2Throw,
@@ -162,10 +174,10 @@ function GameBody({ player1, player2, resetPlayers }) {
     setPlayer1Throw(int_008);
     handleButtonPress(
       str_071,
-      player1,
+      player1SavedOrNew,
       player1Score,
       setPlayer1Score,
-      player2,
+      player2SavedOrNew,
       player2Score,
       setPlayer2Score,
       setPlayer2Throw,
@@ -177,10 +189,10 @@ function GameBody({ player1, player2, resetPlayers }) {
     setPlayer1Throw(int_009);
     handleButtonPress(
       str_072,
-      player1,
+      player1SavedOrNew,
       player1Score,
       setPlayer1Score,
-      player2,
+      player2SavedOrNew,
       player2Score,
       setPlayer2Score,
       setPlayer2Throw,
@@ -189,6 +201,8 @@ function GameBody({ player1, player2, resetPlayers }) {
     );
   };
   const resetPressed = () => {
+    cookies.remove(str_075);
+    cookies.remove(str_076);
     setPlayer1Score(int_001);
     setPlayer2Score(int_001);
     setResultMessage(int_001);
@@ -196,8 +210,19 @@ function GameBody({ player1, player2, resetPlayers }) {
     setPlayer1Throw(int_010);
     setPlayer2Throw(int_010);
   };
-  const newGamePressed = () => resetPlayers();
-  const isNewGame = player1Throw === int_010;
+  const newPlayersPressed = () => {
+    cookies.remove(str_075);
+    cookies.remove(str_076);
+    resetPlayers();
+  };
+  const isNewGame =
+    storedPlayer1Score === int_001 && storedPlayer2Score === int_001;
+  const storedScoreMatches =
+    storedPlayer1Score === player1Score && storedPlayer2Score === player2Score;
+  if (!storedScoreMatches) {
+    cookies.set(str_075, player1Score, { path: str_054 });
+    cookies.set(str_076, player2Score, { path: str_054 });
+  }
   return (
     <div className={c_004}>
       <div className={c_006}>
@@ -209,7 +234,7 @@ function GameBody({ player1, player2, resetPlayers }) {
           />
         )}
         <RPSButton
-          buttonFunc={newGamePressed}
+          buttonFunc={newPlayersPressed}
           label={str_008}
           buttonClass={c_007}
         />

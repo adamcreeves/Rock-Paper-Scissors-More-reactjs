@@ -8,15 +8,23 @@ import {
   str_012,
   str_013,
   str_014,
+  str_054,
+  str_073,
+  str_074,
 } from "../../resources/strings";
+import Cookies from "universal-cookie";
+import "../../styles/Main.css";
 
 function RegisterPlayers({ setPlayer1, setPlayer2 }) {
   const [name1, setName1] = useState(str_001);
   const [name2, setName2] = useState(str_001);
+  const cookies = new Cookies();
   const startGamePressed = () => {
     if (name1.toLowerCase() !== name2.toLowerCase()) {
       setPlayer1(name1.trim());
       setPlayer2(name2.trim());
+      cookies.set(str_073, name1.trim(), { path: str_054 });
+      cookies.set(str_074, name2.trim(), { path: str_054 });
     } else {
       alert(str_009);
     }
