@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test App renders app 1`] = `
+<DocumentFragment>
+  <div
+    class="body"
+    data-testid="body-component"
+  >
+    <div
+      class="title"
+      data-testid="title-component"
+    >
+      Welcome to Adam's
+    </div>
+    <div
+      class="subtitle"
+      data-testid="title-component"
+    >
+      Rock Paper Scissors Game
+    </div>
+    <form
+      class="registerPlayers"
+    >
+      <input
+        class="registerPlayers__playerName"
+        placeholder="Enter Player 1's Name"
+        required=""
+        type="text"
+        value=""
+      />
+      <input
+        class="registerPlayers__playerName"
+        placeholder="Enter Player 2's Name"
+        required=""
+        type="text"
+        value=""
+      />
+      <input
+        class="gameBody__gameButton"
+        type="submit"
+        value="Start Game"
+      />
+    </form>
+  </div>
+</DocumentFragment>
+`;

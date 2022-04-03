@@ -26,7 +26,7 @@ function Body() {
     cookies.remove(str_074);
   };
   return (
-    <div className={c_001}>
+    <div className={c_001} data-testid="body-component">
       <Title str={str_002} classNm={c_002} />
       <Title str={str_003} classNm={c_003} />
       {!player1 ? (

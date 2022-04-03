@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Body should match the snapshot 1`] = `
+<DocumentFragment>
+  <button />
+</DocumentFragment>
+`;

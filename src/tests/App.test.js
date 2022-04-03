@@ -1,8 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import App from "../app/App";
 
-test("renders learn react link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("Test App", () => {
+  it("renders app", () => {
+    const { asFragment } = render(<App />);
+    expect(asFragment()).toMatchSnapshot();
+  });
+  it("should render Body and not be null", () => {
+    const { asFragment } = render(<App />);
+    expect(asFragment()).not.toBeNull();
+  });
 });

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Body should match the snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="responseMessage"
+    >
+      <div
+        class="responseMessage__throws"
+      >
+        undefined throws undefined and undefined throws undefined
+      </div>
+      <div
+        class="responseMessage__winner"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

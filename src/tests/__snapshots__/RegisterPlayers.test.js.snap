@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Body should match the snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="registerPlayers"
+  >
+    <input
+      class="registerPlayers__playerName"
+      placeholder="Enter Player 1's Name"
+      required=""
+      type="text"
+      value=""
+    />
+    <input
+      class="registerPlayers__playerName"
+      placeholder="Enter Player 2's Name"
+      required=""
+      type="text"
+      value=""
+    />
+    <input
+      class="gameBody__gameButton"
+      type="submit"
+      value="Start Game"
+    />
+  </form>
+</DocumentFragment>
+`;
