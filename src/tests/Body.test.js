@@ -11,8 +11,4 @@ describe("Test Body", () => {
     const { asFragment } = render(<Body />);
     expect(asFragment()).not.toBeNull();
   });
-  //   it("should contain body-component", () => {
-  //     const { asFragment } = render(<Body />);
-  //     expect(asFragment()).toBeCalled();
-  //   });
 });

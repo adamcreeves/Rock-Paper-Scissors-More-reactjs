@@ -6,7 +6,7 @@ describe("Test App", () => {
     const { asFragment } = render(<App />);
     expect(asFragment()).toMatchSnapshot();
   });
-  it("should render Body and not be null", () => {
+  it("should render App and not be null", () => {
     const { asFragment } = render(<App />);
     expect(asFragment()).not.toBeNull();
   });
