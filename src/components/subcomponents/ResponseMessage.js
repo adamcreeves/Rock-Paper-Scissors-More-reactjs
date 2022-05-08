@@ -27,9 +27,7 @@ function ResponseMessage({
   return (
     <div>
       {player2sThrow === int_010 &&
-      (player1 ||
-        storedPlayer1Score !== int_001 ||
-        storedPlayer2Score !== int_001) ? (
+      (storedPlayer1Score !== int_001 || storedPlayer2Score !== int_001) ? (
         <div className={c_011}>
           <div className={c_020}>{str_077}</div>
           <div className={c_012}>{str_078}</div>
