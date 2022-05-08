@@ -100,11 +100,13 @@ code {
   flex-direction: column;
   align-items: center;
   margin: 2%;
+  width: max-content;
 }
 
 .scoreBoard__body {
   display: flex;
   flex-direction: row;
+  width: max-content;
 }
 
 .scoreBoard__row {
@@ -119,6 +121,7 @@ code {
 .scoreBoard__label {
   margin-right: 5px;
   color: #003b73;
+  width: max-content;
 }
 
 .scoreBoard__score {
@@ -345,11 +348,6 @@ code {
 
   .registerPlayers {
     margin-top: 3%;
-  }
-
-  .scoreBoard__row {
-    margin-left: 2%;
-    margin-right: 2%;
   }
 
   .splash {
