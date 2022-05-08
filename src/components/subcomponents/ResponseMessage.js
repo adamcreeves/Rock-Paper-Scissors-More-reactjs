@@ -12,7 +12,6 @@ import {
 import { int_001, int_010 } from "../../resources/integers";
 import { c_011, c_012, c_013, c_020 } from "../../resources/classNames";
 import Cookies from "universal-cookie";
-import "../../styles/Main.css";
 
 function ResponseMessage({
   player1,
@@ -28,7 +27,9 @@ function ResponseMessage({
   return (
     <div>
       {player2sThrow === int_010 &&
-      (storedPlayer1Score !== int_001 || storedPlayer2Score !== int_001) ? (
+      (player1 ||
+        storedPlayer1Score !== int_001 ||
+        storedPlayer2Score !== int_001) ? (
         <div className={c_011}>
           <div className={c_020}>{str_077}</div>
           <div className={c_012}>{str_078}</div>

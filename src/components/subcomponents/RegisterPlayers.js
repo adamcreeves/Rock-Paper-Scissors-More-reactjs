@@ -13,7 +13,6 @@ import {
   str_074,
 } from "../../resources/strings";
 import Cookies from "universal-cookie";
-import "../../styles/Main.css";
 
 function RegisterPlayers({ setPlayer1, setPlayer2 }) {
   const [name1, setName1] = useState(str_001);

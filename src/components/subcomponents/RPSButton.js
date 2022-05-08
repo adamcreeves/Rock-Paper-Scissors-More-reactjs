@@ -1,5 +1,4 @@
 import React from "react";
-import "../../styles/Main.css";
 
 function RPSButton({ buttonFunc, label, buttonClass }) {
   return (

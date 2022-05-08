@@ -1,6 +1,6 @@
 export const str_001 = "";
-export const str_002 = "Welcome to Adam's";
-export const str_003 = "Rock Paper Scissors Game";
+export const str_002 = "Rock, Paper, Scissors, More";
+export const str_003 = "by Adam Reeves";
 export const str_004 = "Rock";
 export const str_005 = "Paper";
 export const str_006 = "Scissors";
@@ -76,3 +76,5 @@ export const str_075 = "player1sScore";
 export const str_076 = "player2sScore";
 export const str_077 = "Your previous game has been restored";
 export const str_078 = "Let's continue playing!";
+export const str_079 = "Register Players";
+export const str_080 = "LOADING...";

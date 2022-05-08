@@ -9,7 +9,6 @@ import {
 } from "../../resources/classNames";
 import { str_017, str_018 } from "../../resources/strings";
 import Title from "./Title";
-import "../../styles/Main.css";
 
 function ScoreBoard({ player1, player1Score, player2, player2Score }) {
   return (

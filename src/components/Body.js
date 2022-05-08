@@ -2,16 +2,9 @@ import React, { useState } from "react";
 import Title from "./subcomponents/Title";
 import GameBody from "./subcomponents/GameBody";
 import RegisterPlayers from "./subcomponents/RegisterPlayers";
-import {
-  str_001,
-  str_002,
-  str_003,
-  str_073,
-  str_074,
-} from "../resources/strings";
-import { c_001, c_002, c_003 } from "../resources/classNames";
+import { str_001, str_073, str_074, str_079 } from "../resources/strings";
+import { c_001, c_002 } from "../resources/classNames";
 import Cookies from "universal-cookie";
-import "../styles/Main.css";
 
 function Body() {
   const cookies = new Cookies();
@@ -27,10 +20,11 @@ function Body() {
   };
   return (
     <div className={c_001} data-testid="body-component">
-      <Title str={str_002} classNm={c_002} />
-      <Title str={str_003} classNm={c_003} />
       {!player1 ? (
-        <RegisterPlayers setPlayer1={setPlayer1} setPlayer2={setPlayer2} />
+        <>
+          <Title str={str_079} classNm={c_002} />
+          <RegisterPlayers setPlayer1={setPlayer1} setPlayer2={setPlayer2} />
+        </>
       ) : (
         <GameBody
           player1={player1}

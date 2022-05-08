@@ -48,6 +48,7 @@ code {
   height: 470px;
   flex-direction: column;
   align-items: center;
+  background-color: #bfd7ed;
 }
 
 .gameBody__buttonsAll {
@@ -75,8 +76,8 @@ code {
   width: 150px;
   height: 50px;
   border-radius: 5px;
-  color: skyblue;
-  background-color: black;
+  color: #ffffff;
+  background-color: #003b73;
   font-weight: 600;
   font-size: 25px;
 }
@@ -85,9 +86,9 @@ code {
   width: 150px;
   height: 50px;
   border-radius: 5px;
-  color: red;
-  background-color: white;
-  border-color: red;
+  color: #ffffff;
+  background-color: #0074b7;
+  border-color: #ffffff;
   border-width: 2px;
   font-size: 20px;
   margin-left: 10px;
@@ -117,21 +118,27 @@ code {
 
 .scoreBoard__label {
   margin-right: 5px;
+  color: #003b73;
 }
 
 .scoreBoard__score {
   font-weight: 700;
+  color: #003b73;
 }
 
 .title {
   font-size: 34px;
   margin-bottom: 1%;
+  color: #003b73;
+  font-weight: 400;
+  text-align: center;
 }
 
 .subtitle {
   font-size: 25px;
-  color: red;
-  font-weight: 300;
+  font-weight: 400;
+  text-align: center;
+  color: #0074b7;
 }
 
 .scoreBoard__title {
@@ -139,6 +146,7 @@ code {
   font-weight: 600;
   text-decoration: underline;
   margin: 10px;
+  color: #003b73;
 }
 
 .responseMessage {
@@ -156,6 +164,7 @@ code {
   height: 25px;
   margin-bottom: 1%;
   font-weight: 600;
+  color: #0074b7;
 }
 
 .responseMessage__result {
@@ -163,13 +172,14 @@ code {
   height: auto;
   margin-bottom: 1%;
   font-style: italic;
+  color: #0074b7;
 }
 
 .responseMessage__winner {
   font-size: 25px;
   height: 30px;
   font-weight: 700;
-  color: crimson;
+  color: #003b73;
   text-align: center;
 }
 
@@ -180,9 +190,10 @@ code {
   margin-top: 3%;
   border: solid;
   padding: 7%;
-  border-color: black;
+  border-color: #000000;
   border-width: 1px;
   border-radius: 5px;
+  background-color: #bfd7ed;
 }
 
 .registerPlayers__playerName {
@@ -194,6 +205,80 @@ code {
   border-color: black;
   border-width: 1px;
   border-radius: 5px;
+}
+
+.splash {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20%;
+}
+
+.splash__titleContainer {
+  border: solid;
+  padding: 10%;
+  width: 400px;
+  border-color: #000000;
+  border-width: 1px;
+  border-radius: 5px;
+  background-color: #003b73;
+}
+
+.splash__title {
+  font-size: 34px;
+  margin-bottom: 1%;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+}
+
+.splash__subtitle {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+}
+
+.loader {
+  margin-top: 30%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.loader span {
+  font-size: 22px;
+  margin: auto;
+  color: #003b73;
+  font-weight: 500;
+}
+
+.ball {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #003b73;
+  animation: bounce 0.5s alternate infinite;
+}
+
+.ball:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.ball:nth-child(3) {
+  animation-delay: 0.32s;
+}
+
+@keyframes bounce {
+  from {
+    transform: scaleX(1.25);
+  }
+  to {
+    transform: translateY(-50px) scale(1);
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -219,7 +304,7 @@ code {
   }
 
   .subtitle {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .gameBody__button {
@@ -265,6 +350,18 @@ code {
   .scoreBoard__row {
     margin-left: 2%;
     margin-right: 2%;
+  }
+
+  .splash {
+    margin-top: 35%;
+  }
+
+  .splash__titleContainer {
+    width: auto;
+    margin-left: 6%;
+  }
+  .loader {
+    margin-left: 6%;
   }
 }
 

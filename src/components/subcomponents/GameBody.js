@@ -50,7 +50,6 @@ import {
   c_008,
   c_021,
 } from "../../resources/classNames";
-import "../../styles/Main.css";
 
 function GameBody({ player1, player2, resetPlayers }) {
   const cookies = new Cookies();
@@ -216,7 +215,10 @@ function GameBody({ player1, player2, resetPlayers }) {
     resetPlayers();
   };
   const isNewGame =
-    storedPlayer1Score === int_001 && storedPlayer2Score === int_001;
+    storedPlayer1Score === int_001 &&
+    storedPlayer2Score === int_001 &&
+    player1Score === 0 &&
+    player2Score === 0;
   const storedScoreMatches =
     storedPlayer1Score === player1Score && storedPlayer2Score === player2Score;
   if (!storedScoreMatches) {
