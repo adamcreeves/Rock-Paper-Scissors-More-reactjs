@@ -13,17 +13,21 @@ import {
   str_074,
 } from "../../resources/strings";
 import Cookies from "universal-cookie";
+import { db } from "../../firebase/config";
 
 function RegisterPlayers({ setPlayer1, setPlayer2 }) {
   const [name1, setName1] = useState(str_001);
   const [name2, setName2] = useState(str_001);
   const cookies = new Cookies();
-  const startGamePressed = () => {
+  const dataBase = db.collection("Names Registered");
+
+  const startGamePressed = async () => {
     if (name1.toLowerCase() !== name2.toLowerCase()) {
       setPlayer1(name1.trim());
       setPlayer2(name2.trim());
       cookies.set(str_073, name1.trim(), { path: str_054 });
       cookies.set(str_074, name2.trim(), { path: str_054 });
+      await dataBase.add({ Player1: name1.trim(), Player2: name2.trim() });
     } else {
       alert(str_009);
     }
